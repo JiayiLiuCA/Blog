@@ -1,16 +1,25 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import {graphql, useStaticQuery} from 'gatsby'
 import './all.sass'
-import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+
+const Layout = ({ title, children }) => {
+  const data = useStaticQuery(graphql`
+    query HeadingQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{'title'}</title>
+        <title>{title}</title>
         
       </Helmet>
       <div>{children}</div>
@@ -19,4 +28,4 @@ const TemplateWrapper = ({ children }) => {
   )
 }
 
-export default TemplateWrapper
+export default Layout
