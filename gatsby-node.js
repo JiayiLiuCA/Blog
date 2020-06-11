@@ -16,6 +16,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              date (formatString: "YYYY MM DD")
+              path
+              title
               templateKey
             }
           }
@@ -52,11 +55,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const filePath = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value : filePath.replace(
+        /^(\/blog\/)/,
+        ""
+      )
     })
   }
 }

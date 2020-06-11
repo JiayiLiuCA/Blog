@@ -1,7 +1,8 @@
 ---
-title: LeetCode 80. Remove Duplicates from Sorted Array II
-date: 2020-03-13 16:02:59
 templateKey: blog-post
+title: LeetCode 80. Remove Duplicates from Sorted Array II
+date: 2020-03-29T17:04:45.772Z
+description: 80
 tags: 
     -leetcode
 ---
