@@ -4,7 +4,7 @@ title: LeetCode 394. Decode String
 date: 2020-02-25T17:58:01.302Z
 description: 394
 tags: 
-    -leetcode
+    - leetcode
 ---
 
 
