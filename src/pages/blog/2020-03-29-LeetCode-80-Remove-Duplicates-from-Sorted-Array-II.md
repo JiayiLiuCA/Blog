@@ -4,7 +4,7 @@ title: LeetCode 80. Remove Duplicates from Sorted Array II
 date: 2020-03-29T17:04:45.772Z
 description: 80
 tags: 
-    -leetcode
+    - leetcode
 ---
 
 ### LeetCode #80
