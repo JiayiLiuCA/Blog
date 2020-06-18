@@ -33,4 +33,8 @@ It doesn't matter what values are set beyond the returned length.
 
 ### First accepted submission
 
+```cpp
+int test () {return 0;}
+```
+
 
