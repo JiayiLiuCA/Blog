@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: LeetCode 394. Decode String
 date: 2020-02-25T17:58:01.302Z
-description: 394
+description: leetcode 394
 tags: 
     - leetcode
 ---
@@ -26,7 +26,6 @@ s = "3[a2[c]]", return "accaccacc".
 s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 ```
 
-<!--more-->
 
 ### First Submission
 

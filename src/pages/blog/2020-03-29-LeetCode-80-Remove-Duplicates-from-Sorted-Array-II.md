@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: LeetCode 80. Remove Duplicates from Sorted Array II
 date: 2020-03-29T17:04:45.772Z
-description: 80
+description: leetcode 80
 tags: 
     - leetcode
 ---
@@ -30,7 +30,6 @@ Your function should return length = 7, with the first seven elements of nums be
 
 It doesn't matter what values are set beyond the returned length.
 ```
-<!--more-->
 
 ### First accepted submission
 ```cpp
