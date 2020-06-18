@@ -31,3 +31,28 @@ It doesn't matter what values are set beyond the returned length.
 ```
 <!--more-->
 
+### First accepted submission
+```cpp
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if (nums.size()<3) {
+            return nums.size();
+        }
+        int x = 0;
+        for(int i = 1; i<nums.size();i++) {
+            if (x == 0 && nums[i] == nums[x] && i==1) {
+                x++; //special case for i == 1;
+            }
+            if (nums[i] != nums[x]) {
+                nums[++x] = nums[i];
+                if (i<nums.size()-1 && nums[i+1] == nums[i]) {
+                    nums[++x] = nums[i++];
+                }
+            }
+        }
+        return x+1;
+    }
+};
+```
+
