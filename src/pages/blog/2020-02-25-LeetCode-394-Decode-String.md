@@ -8,7 +8,6 @@ tags:
 ---
 
 
-### LeetCode #394
 
 Given an encoded string, return its decoded string.
 

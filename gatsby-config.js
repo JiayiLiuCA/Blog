@@ -42,6 +42,13 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true,
+              noInLineHighlight: true
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
