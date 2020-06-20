@@ -21,7 +21,7 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="title is-size-2 has-text-weight-bold is-bold-light">
+            <div className='postify'>
               <p>{description}</p>
               <PostContent content={content} />
             </div>
@@ -38,8 +38,16 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Navbar />
-      <h1>{post.frontmatter.title + '   //trianglify to be added'}</h1>
+      <section className='hero is-medium'>
+        <div className='hero-head'>
+          <Navbar />
+        </div>
+        <div className='hero-body has-text-centered'>
+          <div className='container'>
+            <h1 className='title'>{post.frontmatter.title}</h1>
+          </div>
+        </div>
+      </section>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
