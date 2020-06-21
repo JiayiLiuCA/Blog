@@ -2,11 +2,10 @@
 templateKey: blog-post
 title: LeetCode 394. Decode String
 date: 2020-02-25T17:58:01.302Z
-description: leetcode 394
+description: leetcode 394 solutions
 tags: 
     - leetcode
 ---
-
 
 
 Given an encoded string, return its decoded string.

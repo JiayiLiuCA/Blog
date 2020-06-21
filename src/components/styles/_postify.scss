@@ -23,7 +23,7 @@ $postify-color-header-counter: #888 !default;
   }
 
   /* ========================================================================= *\
-   * 链接
+   * link
   \* ========================================================================= */
 
   a {
@@ -39,7 +39,7 @@ $postify-color-header-counter: #888 !default;
   }
 
   li, h1, h2, h3, h4, h5, h6 {
-    // 下划线用边框模拟
+    // underline
     a {
       border-bottom: 1px solid transparent;
       _border-bottom: 1px none;
@@ -51,16 +51,6 @@ $postify-color-header-counter: #888 !default;
     }
   }
 
-  // 防止 a>img hover 时下划线位置错位
-  // 如果 img 不需要下划线可以直接：
-  // a img {
-  //   float: left;
-  // }
-
-  // 或者：
-  // a img {
-  //   display: block;
-  // }
 
   a img {
     vertical-align: baseline;
@@ -71,23 +61,15 @@ $postify-color-header-counter: #888 !default;
     border-bottom: 1px dotted;
   }
 
-  // 保留 i 标签斜体
   i {
     font-style: italic;
   }
 
-  // 重置中文斜体
-  // cite 标签通常用在书籍或杂志的标题
-  cite, em, var, address, dfn {
-    font-style: normal;
-  }
 
   cite {
     border-bottom: 3px double;
   }
 
-  // 专名号和em
-  // 1. 保持留白，防止两个连续标签下划线连在一起
   u, em {
     margin-right: .25em; /* 1 */
     text-decoration: none;
@@ -110,7 +92,6 @@ $postify-color-header-counter: #888 !default;
     border-bottom: 1px dotted;
   }
 
-  // figure 内图片居中
   figure {
     text-align: center;
   }

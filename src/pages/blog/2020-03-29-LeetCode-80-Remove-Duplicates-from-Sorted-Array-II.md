@@ -2,12 +2,10 @@
 templateKey: blog-post
 title: LeetCode 80. Remove Duplicates from Sorted Array II
 date: 2020-03-29T17:04:45.772Z
-description: leetcode 80
+description: leetcode 80 solutions
 tags: 
     - leetcode
 ---
-
-### LeetCode #80
 
 Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 

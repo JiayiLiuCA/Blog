@@ -5,6 +5,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Navbar from '../components/Navbar'
+import Trianglify from '../components/Trianglify'
 
 export const BlogPostTemplate = ({
   content,
@@ -38,13 +39,19 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <section className='hero is-medium'>
+      <section className='hero is-medium has-text-centered has-trianglify'>
+        <Trianglify title={post.frontmatter.title} />
         <div className='hero-head'>
           <Navbar />
         </div>
-        <div className='hero-body has-text-centered'>
+        <div className='hero-body'>
           <div className='container'>
             <h1 className='title'>{post.frontmatter.title}</h1>
+          </div>
+        </div>
+        <div className='hero-foot'>
+          <div className='post-hero-foot'>
+            {post.frontmatter.date}
           </div>
         </div>
       </section>
