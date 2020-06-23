@@ -305,7 +305,7 @@ $postify-color-link: $link;
 // do not push element down on touch device
 .navbar-menu.is-active {
   position: absolute;
-  z-index: 20;
+  z-index: 30;
   width: 100%;
 }
 

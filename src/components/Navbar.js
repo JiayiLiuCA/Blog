@@ -40,13 +40,13 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo"> 
+            <a className='navbar-item' href='https://www.jiayiliu.ca' title="JL"> 
               <img 
-                src={withPrefix('/img/favicon/favicon.jpg')}
-                width = '40'
-                height = '40'              
+                src={withPrefix('/img/favicon/favicon.png')}
+                width = '30'
+                height = '30'              
               />
-            </Link>
+            </a>
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
