@@ -294,7 +294,7 @@ $postify-color-link: $link;
   object-fit: cover;
   object-position: center;
   user-select: none;
-  animation: 0.5s trianglify-show ;
+  //animation: 0.5s trianglify-show ;
 }
 
 @keyframes trianglify-show {
