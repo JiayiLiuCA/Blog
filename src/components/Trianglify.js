@@ -10,7 +10,12 @@ const Trianglify = React.memo(({ title }) => {
         height: window.innerHeight,
         seed: title
     })
-    return <img className='trianglify-image' src={pattern.toCanvas().toDataURL()} aria-hidden='true' />
+    return <img
+            className='trianglify-image'
+            src={pattern.toCanvas().toDataURL()}
+            alt='trianglify'
+            aria-hidden='true' 
+            />
 })
 
 

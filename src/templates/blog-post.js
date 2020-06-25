@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
@@ -24,7 +24,21 @@ export const BlogPostTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className='postify'>
               <p>{description}</p>
+              {/*table of content*/}
               <PostContent content={content} />
+            </div>
+            <div style={{ marginTop: `2rem` }}>
+              <div className='tag'>
+                {tags.map(tag => (
+                  <Link
+                    key={tag}
+                    className='tag is-info is-rounded'
+                    to={`/`}
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -65,6 +79,7 @@ const BlogPost = ({ data }) => {
           </Helmet>
         }
         title={post.frontmatter.title}
+        tags={post.frontmatter.tags}
       />
     </Layout>
   )

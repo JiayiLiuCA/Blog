@@ -43,6 +43,7 @@ const Navbar = class extends React.Component {
             <a className='navbar-item' href='https://www.jiayiliu.ca' title="JL"> 
               <img 
                 src={withPrefix('/img/favicon/favicon-96.png')}
+                alt='favicon'
                 width = '28'
                 height = '28'              
               />
