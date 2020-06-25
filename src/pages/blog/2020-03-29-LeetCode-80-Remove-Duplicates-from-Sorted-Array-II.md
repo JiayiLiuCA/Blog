@@ -5,6 +5,7 @@ date: 2020-03-29T17:04:45.772Z
 description: leetcode 80 solutions
 tags: 
     - leetcode
+    - algorithm
 ---
 
 Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.

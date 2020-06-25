@@ -5,6 +5,7 @@ date: 2020-02-25T17:58:01.302Z
 description: leetcode 394 solutions
 tags: 
     - leetcode
+    - algorithm
 ---
 
 

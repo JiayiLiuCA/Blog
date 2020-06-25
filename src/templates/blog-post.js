@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
+      <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className='postify'>
@@ -27,13 +27,13 @@ export const BlogPostTemplate = ({
               {/*table of content*/}
               <PostContent content={content} />
             </div>
-            <div style={{ marginTop: `2rem` }}>
-              <div className='tag'>
+            <div style={{ marginTop: '2rem' }}>
+              <div className='tags'>
                 {tags.map(tag => (
                   <Link
                     key={tag}
                     className='tag is-info is-rounded'
-                    to={`/`}
+                    to={`/archives`}
                   >
                     #{tag}
                   </Link>
@@ -93,6 +93,10 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      tableOfContents
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
