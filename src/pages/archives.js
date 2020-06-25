@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 export default function ArchivesPage ({data}) {
     return (
         <Layout>
+            <Navbar />
             <div>Archives</div>
         </Layout>
     )
