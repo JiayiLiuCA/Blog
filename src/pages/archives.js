@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
-import PostItem from '../components/PostItem'
 
 const ArchivesPage = ({ data: { posts } }) => {
     return (
