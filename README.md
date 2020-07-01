@@ -7,4 +7,4 @@
 - Source: Git
 - Deploy: Netlify
 - CMS : Netlify CMS
-- Styling: Bulma
+- Styling: Bulma, Sass
