@@ -30,7 +30,7 @@ Your function should return length = 7, with the first seven elements of nums be
 It doesn't matter what values are set beyond the returned length.
 ```
 
-### First accepted submission
+## First accepted submission
 ```cpp
 class Solution {
 public:
@@ -55,7 +55,7 @@ public:
 };
 ```
 
-### Second submission, cleaner code
+## Second submission, cleaner code
 
 ```cpp
 class Solution {

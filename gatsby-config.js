@@ -36,16 +36,23 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: '100',
+              className: 'auto-anchor'
+            }
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',
-            },
+            }
           },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
               showLineNumbers: true,
-              noInLineHighlight: true
+              noInlineHighlight: true
             }
           },
           {

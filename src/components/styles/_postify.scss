@@ -95,4 +95,129 @@ $postify-color-header-counter: #888 !default;
   figure {
     text-align: center;
   }
+
+  p {
+    margin-top: 1.29em;
+    margin-bottom: 1.29em;
+  }
+
+  h1 {
+    font-size: 2.14em;
+  }
+
+  h2 {
+    font-size: 1.86em;
+  }
+
+  h3 {
+    font-size: 1.43em;
+  }
+
+  h4 {
+    font-size: 1.29em;
+  }
+
+  h5 {
+    font-size: 1.14em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.29rem;
+    margin-bottom: 1.29rem;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style-type: square; // /* 1 */
+    padding-left: 2.14em;
+    margin-top: 1em;
+  }
+
+  ul ul,
+  ul ol ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 2.14em;
+  }
+
+  ol ol ul,
+  ol ul ul,
+  ul ul ul {
+    list-style-type: circle;
+  }
+
+  ol ol ol ul,
+  ol ol ul ul,
+  ol ul ul ul,
+  ul ul ul ul {
+    list-style-type: square;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  hr {
+    border: 0 none;
+    border-bottom: 1px solid $postify-color-hr;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  h2, h3, h4 {
+    &:before {
+      margin-right: .5em;
+      color: $postify-color-header-counter;
+    }
+  }
+
+  counter-reset: chapter section subsection;
+
+  h2 {
+    counter-reset: section;
+
+    &:before {
+      content: counter(chapter);
+      counter-increment: chapter;
+    }
+  }
+
+  h3 {
+    counter-reset: subsection;
+
+    &:before {
+      content: counter(chapter) '.' counter(section);
+      counter-increment: section;
+    }
+  }
+
+  h4:before {
+    content: counter(chapter) '.' counter(section) '.' counter(subsection);
+    counter-increment: subsection;
+  }
+  
+
+  %underline-fix {
+    a:hover,
+    ins:hover {
+      border: 0 none;
+      text-decoration: underline;
+    }
+  }
+
 }
+
+
+

@@ -26,7 +26,7 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 ```
 
 
-### First Submission
+## First Submission
 
 ```cpp
 class Solution {
@@ -96,7 +96,7 @@ public:
 };
 ```
 
-### Simplified
+## Simplified
 
 ```cpp
 class Solution {

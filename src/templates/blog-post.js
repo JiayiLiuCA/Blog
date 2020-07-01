@@ -10,6 +10,7 @@ import Trianglify from '../components/Trianglify'
 export const BlogPostTemplate = ({
   content,
   description,
+  tableOfContents,
   contentComponent,
   helmet,
   tags
@@ -25,6 +26,10 @@ export const BlogPostTemplate = ({
             <div className='postify'>
               <p>{description}</p>
               {/*table of content*/}
+              <div
+                className='post-toc'
+                dangerouslySetInnerHTML={{ __html: tableOfContents }}
+              />
               <PostContent content={content} />
             </div>
             <div style={{ marginTop: '2rem' }}>
@@ -73,6 +78,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        tableOfContents={post.tableOfContents}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>

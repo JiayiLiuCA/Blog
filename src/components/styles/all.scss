@@ -109,68 +109,20 @@ $postify-color-link: $link;
 
 
 .gatsby-highlight {
-  padding: 2em 1.5em;
-  border-radius: 5px;
-  
-  pre[class*="language-"].line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-    font-size: inherit;
-    
-    &>code {
-      position: relative;
-      white-space: inherit;
-      font-size: inherit;
-    }
-  }
-  
-  .line-numbers-rows {
-    width: 2em !important;
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    letter-spacing: -1px;
-    border-right: 1px #404040 solid;
-    user-select: none;
-    
-    &>span {
-      pointer-events: none;
-      display: block;
-      counter-increment: linenumber;
-      
-      &::before {
-        content: counter(linenumber);
-        color: #999;
-        display: block;
-        padding-right: 0.8em;
-        text-align: right;
-      }
-    }
-  }
-  
-  // fix bulma conflict
-  .tag {
-    display: inline;
-    font-size: 1em;
-    background-color: transparent;
-    border-radius: 0;
-    padding: 10;
-    line-height: 24px;
-    white-space: pre;
-  }
-  
-  @media screen and (max-width: $mobile) {
-    margin: 0 -1.5rem;
-    padding: 2em 0.5em;
-    border-radius: 0;
-    font-size: 14px;
-    
-    pre[class*="language-"].line-numbers {
-      padding: 0 1em 0 2.8em;
-    }
-  }
+  background-color: #282a36;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
 }
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+  
+
 
 .post-toc {
   padding: 1em;
@@ -183,21 +135,6 @@ $postify-color-link: $link;
   
   @media screen and (max-width: $mobile) {
     padding: 1em 0;
-  }
-}
-
-.auto-anchor {
-  border: none !important;
-  position: relative;
-  top: -3px;
-  
-  svg {
-    fill: $text;
-    
-    @media screen and (max-width: $tablet) {
-      fill: $grey-light;
-      visibility: visible !important;
-    }
   }
 }
 
