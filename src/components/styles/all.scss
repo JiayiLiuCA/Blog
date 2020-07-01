@@ -114,11 +114,20 @@ $postify-color-link: $link;
   margin: 0.5em 0;
   padding: 1em;
   overflow: auto;
+  .tag { //fix bulma tag and markdown html tag conflict
+    display: inline;
+    font-size: 1em;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    line-height: 24px;
+    white-space: pre;
+  }
 }
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding: 0;
-  padding-left: 2.8em;
+  padding-left: 3em;
   overflow: initial;
 }
   
