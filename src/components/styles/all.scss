@@ -162,7 +162,7 @@ $postify-color-link: $link;
 // with gatsby image as background
 .hero.has-gatsby-img {
   @extend .is-fullheight;
-  @extend .is-dark;
+  //@extend .is-dark;
   position: relative;
   color: #fff;
   

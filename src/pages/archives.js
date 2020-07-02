@@ -31,7 +31,7 @@ export default ArchivesPage
 export const archivesPageQuery = graphql`
     query ArchivesQuery {
         posts: allMarkdownRemark(
-            sort: { fields: [frontmatter___date] }
+            sort: { fields: [frontmatter___date], order: DESC }
             filter: {
                 frontmatter: { templateKey: { eq: "blog-post" } }
             }

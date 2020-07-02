@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from './Footer'
-import './styles'
+import './styles/all.scss'
 
 
 const Layout = ({ title, children }) => {
