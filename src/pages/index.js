@@ -7,12 +7,26 @@ import PostList from '../components/PostList'
 
 
 export default function IndexPage({ data }) {
+    const tempoMarkings = [
+        'Larghissimo', 'Adagissimo', 'Grave', 'Largo', 'Lento',
+        'Larghetto', 'Adagio', 'Adagietto', 'Andante', 'Andantino',
+        'Marcia moderato', 'Andante moderato', 'Moderato', 'Allegretto', 'Allegro moderato',
+        'Allegro', 'Vivace', 'Vivacissimo', 'Allegrissimo', 'Presto', 'Prestissimo'
+    ]
     return (
         <Layout>
             <section className="hero has-gatsby-img">
                 <Img fluid={data.file.childImageSharp.fluid} />
                 <Navbar />
-                <div className="hero-body">Hello World</div>
+                <div className="hero-body has-text-centered">
+                    <div className="container is-size-4">
+                        {tempoMarkings.map(tempoMarking => (
+                            <div className="hidden-text" style={{ color: "#000000" }}>
+                                {tempoMarking}
+                            </div>
+                        ))}
+                    </div>
+                </div>
                 <div className="hero-foot has-text-centered">
                     <svg viewBox="0 0 32 32" width="32" height="32">
                         <title>scroll down</title>
