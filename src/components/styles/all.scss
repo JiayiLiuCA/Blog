@@ -157,7 +157,7 @@ $postify-color-link: $link;
   }
   
   .hero-body {
-    padding-top: 10em;
+    padding-top: 2em;
     align-items: flex-start !important; 
   }
   
@@ -181,7 +181,14 @@ $postify-color-link: $link;
   }
 }
 
+@media screen and (max-width: $mobile) {
+  .hidden-text {
+    display: none;
+  }
+}
+
 .hidden-text {
+  font-style: italic;;
   user-select: none;
   opacity: 0;
   transition: 2s linear;
@@ -192,10 +199,7 @@ $postify-color-link: $link;
   transition: 0.1s linear;
   //animation: 1s, fade-in-out, ease-in-out; 
 }
-@keyframes fade-in-out {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
+
 
 //box PostItem
 .box {

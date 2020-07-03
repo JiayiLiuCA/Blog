@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Img from 'gatsby-image'
 import PostList from '../components/PostList'
+import logo from '../img/logo.png'
 
 
 export default function IndexPage({ data }) {
@@ -19,7 +20,12 @@ export default function IndexPage({ data }) {
                 <Img fluid={data.file.childImageSharp.fluid} />
                 <Navbar />
                 <div className="hero-body has-text-centered">
-                    <div className="container is-size-4">
+                    <div className="container is-size-5">
+                        <img
+                            style={{ width: '200px', height: '200px' }}
+                            src={logo}
+                            alt="logo"
+                        />
                         {tempoMarkings.map(tempoMarking => (
                             <div className="hidden-text" style={{ color: "#000000" }}>
                                 {tempoMarking}
