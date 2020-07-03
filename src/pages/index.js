@@ -22,7 +22,7 @@ export default function IndexPage({ data }) {
                 <div className="hero-body has-text-centered">
                     <div className="container is-size-5">
                         <img
-                            style={{ width: '200px', height: '200px' }}
+                            style={{ width: '350px', height: '350px' }}
                             src={logo}
                             alt="logo"
                         />
