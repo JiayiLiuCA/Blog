@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -13,12 +13,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+            <section className="postify">
               <PageContent className="content" content={content} />
-            </div>
+            </section>
           </div>
         </div>
       </div>
@@ -40,7 +37,6 @@ const AboutPage = ({ data }) => {
       <Navbar />
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
         content={post.html}
       />
     </Layout>
@@ -57,9 +53,6 @@ export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
-      frontmatter {
-        title
-      }
     }
   }
 `
