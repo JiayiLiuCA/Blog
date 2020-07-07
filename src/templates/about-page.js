@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Content, { HTMLContent } from '../components/Content'
+import Utterances from '../components/Utterances'
+import UtterRances from '../components/Utterances'
 
 export const AboutPageTemplate = ({ content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -39,6 +41,7 @@ const AboutPage = ({ data }) => {
         contentComponent={HTMLContent}
         content={post.html}
       />
+      <UtterRances slug="about" />
     </Layout>
   )
 }

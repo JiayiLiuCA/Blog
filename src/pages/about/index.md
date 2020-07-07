@@ -14,13 +14,9 @@ The project is using [Netlify CMS](https://www.netlifycms.org/) for content mana
 
 I am front-end developer located in Toronto, Canada. I love to design and build applications with great UI/UX.
 
-Classical music is another of my passions. My most beloved composer is Johann Sebastian Bach. His music 
+Classical music is another of my passions. My most beloved composer is Johann Sebastian Bach.
 
 I am currently working on a personal project, a music player that runs on Windows, specificly designed for classical music. The project is written in [TypeScript](https://www.typescriptlang.org/) based on [Electron](https://www.electronjs.org/). Stay tuned for the release!
-
-
-
-
 
 
 
