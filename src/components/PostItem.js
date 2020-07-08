@@ -3,18 +3,18 @@ import { Link } from 'gatsby'
 
 const PostItem = React.memo(({ post }) => {
     return (
-        
+
         <div className='box content'>
-            
+
             <p>
-                <Link className='is-link-reverse' to={'/../'+post.fields.slug}>
+                <Link className='is-link-reverse' to={'/../' + post.fields.slug}>
                     <strong>{post.frontmatter.title}</strong>
                 </Link>
                 <span>&bull; </span>
                 <small>{post.frontmatter.date}</small>
             </p>
             <p>{post.frontmatter.description}</p>
-            
+
             <p className='tags'>
                 {post.frontmatter.tags.map(tag => (
                     <Link
@@ -29,7 +29,7 @@ const PostItem = React.memo(({ post }) => {
 
 
         </div>
-        
+
     )
 })
 

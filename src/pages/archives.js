@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
 
-const ArchivesPage = ({ data: { posts } }) => {
+const ArchivesPage = ({ data: { posts }}) => {
+    const [searchTag, setSearchTag] = useState('')
     return (
-        <Layout>
+        <Layout title="Archives" description="Archives Page of this Blog">
             <Navbar />
             <section className='section'>
                 <div className='container'>
@@ -15,7 +16,10 @@ const ArchivesPage = ({ data: { posts } }) => {
                             <input
                                 className='input is-large'
                                 type='text'
-                                placeholder='#'
+                                placeholder='#SearchTag'
+                                onChange = {e => 
+                                    setSearchTag()
+                                }
                             />
                         </div>
                     </div>

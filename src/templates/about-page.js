@@ -35,7 +35,10 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout
+      title="About"
+      description="About this blog"
+    >
       <Navbar />
       <AboutPageTemplate
         contentComponent={HTMLContent}

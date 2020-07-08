@@ -12,7 +12,6 @@ const UtterRances = React.memo(({ slug }) => {
         //https://utteranc.es/?installation_id=10331272&setup_action=install
 
         if (utterancesRef.current) {
-          console.log('aldkfjdlksjf')
             let script = document.createElement("script");
             script.setAttribute("src", "https://utteranc.es/client.js");
             script.setAttribute("crossorigin", "anonymous");

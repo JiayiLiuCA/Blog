@@ -59,7 +59,10 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout
+      title={post.frontmatter.title}
+      description={post.frontmatter.description}
+    >
       <section className='hero is-medium has-text-centered has-trianglify'>
         <Trianglify title={post.frontmatter.title} />
         <div className='hero-head'>

@@ -15,7 +15,7 @@ export default function IndexPage({ data }) {
         'Allegro', 'Vivace', 'Vivacissimo', 'Allegrissimo', 'Presto', 'Prestissimo'
     ]
     return (
-        <Layout>
+        <Layout title="Jiayi Liu Blog" description="Jiayi Liu Blog">
             <section className="hero has-gatsby-img">
                 <Img fluid={data.file.childImageSharp.fluid} />
                 <Navbar />
@@ -28,7 +28,7 @@ export default function IndexPage({ data }) {
                             alt="logo"
                         />
                         {tempoMarkings.map(tempoMarking => (
-                            <div className="hidden-text" style={{ color: "#000000" }}>
+                            <div className="hidden-text" id={tempoMarking} style={{ color: "#000000" }}>
                                 {tempoMarking}
                             </div>
                         ))}

@@ -2,16 +2,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from './Footer'
 import './styles/all.scss'
+import SEO from './SEO'
 
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, description, children }) => {
   return (
     <div>
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        
-      </Helmet>
+      <SEO title={title} description={description} />
       <div>{children}</div>
       <Footer />
     </div>
