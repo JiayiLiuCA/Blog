@@ -10,7 +10,6 @@ const ArchivesPage = ({ data: { posts }, location }) => {
     useEffect(() => {
         setSearchText(location.state.searchText)
     }, [location])
-    //console.log(searchText)
     return (
         <Layout title="Archives" description="Archives Page of this Blog">
             <Navbar />

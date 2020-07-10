@@ -2,11 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const PostItem = React.memo(({ post }) => {
-    console.log(post.frontmatter.description)
     return (
-
         <div className='box content'>
-
             <p>
                 <Link className='is-link-reverse' to={`/${post.fields.slug}`}>
                     <strong>{post.frontmatter.title}</strong>
@@ -28,10 +25,7 @@ const PostItem = React.memo(({ post }) => {
                     </Link>
                 ))}
             </p>
-
-
         </div>
-
     )
 })
 

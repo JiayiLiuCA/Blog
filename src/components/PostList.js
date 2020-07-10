@@ -3,7 +3,6 @@ import PostItem from './PostItem'
 
 
 const PostList = React.memo(({ searchText, posts }) => {
-
     return (
         <section className='section'>
             <div className='container'>
@@ -20,8 +19,9 @@ const PostList = React.memo(({ searchText, posts }) => {
                             else {
                                 let lowerCasePostTitle = frontmatter.title.toLowerCase()
                                 let lowerCasePostDescription = frontmatter.description.toLowerCase()
-                                return (lowerCasePostTitle.includes(lowerCaseSearchText)   ||
-                                        lowerCasePostDescription.includes(lowerCaseSearchText)
+                                return (
+                                    lowerCasePostTitle.includes(lowerCaseSearchText) ||
+                                    lowerCasePostDescription.includes(lowerCaseSearchText)
                                 )
                             }
                         }
