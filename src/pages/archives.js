@@ -3,9 +3,9 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
-import { filter } from 'lodash'
 
 const ArchivesPage = ({ data: { posts } }) => {
+    //console.log(posts.edges);
     const [searchTag, setSearchTag] = useState('')
     return (
         <Layout title="Archives" description="Archives Page of this Blog">
@@ -17,10 +17,11 @@ const ArchivesPage = ({ data: { posts } }) => {
                             <input
                                 className='input is-large'
                                 type='text'
-                                placeholder='#SearchTag'
+                                value={searchTag}
                                 onChange={e =>
                                     setSearchTag(e.currentTarget.value)
                                 }
+                                placeholder="#SearchTag"
                             />
                         </div>
                     </div>
