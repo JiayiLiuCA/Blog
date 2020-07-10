@@ -2,8 +2,8 @@ import React from 'react'
 import PostItem from './PostItem'
 
 
-const PostList = React.memo(({posts}) => {
-    
+const PostList = ({ searchTag, posts }) => {
+
     return (
         <section className='section'>
             <div className='container'>
@@ -13,6 +13,7 @@ const PostList = React.memo(({posts}) => {
             </div>
         </section>
     )
-})
+}
+
 
 export default PostList

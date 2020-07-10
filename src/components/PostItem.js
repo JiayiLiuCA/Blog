@@ -7,7 +7,7 @@ const PostItem = React.memo(({ post }) => {
         <div className='box content'>
 
             <p>
-                <Link className='is-link-reverse' to={'/../' + post.fields.slug}>
+                <Link className='is-link-reverse' to={`/${post.fields.slug}`}>
                     <strong>{post.frontmatter.title}</strong>
                 </Link>
                 <span>&bull; </span>

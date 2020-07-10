@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jiayi Liu Blog',
     description:
-      'Jiayi Liu Personal Blog',
+      'Jiayi Liu Blog',
     siteUrl: 'https://blog.jiayiliu.ca/'
   },
   plugins: [
