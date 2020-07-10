@@ -7,7 +7,7 @@ import Content, { HTMLContent } from '../components/Content'
 import Navbar from '../components/Navbar'
 import Trianglify from '../components/Trianglify'
 import Utterances from '../components/Utterances'
-import UtterRances from '../components/Utterances'
+
 
 export const BlogPostTemplate = ({
   content,
@@ -92,7 +92,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
       />
-      <UtterRances slug={post.fields.slug} />
+      <Utterances slug={post.fields.slug} />
     </Layout>
   )
 }

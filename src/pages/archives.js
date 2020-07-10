@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
 
-const ArchivesPage = ({ data: { posts } }) => {
-    //console.log(posts.edges);
-    const [searchTag, setSearchTag] = useState('')
+const ArchivesPage = ({ data: { posts }, location }) => {
+    console.log(location);
+    const [searchText, setSearchText] = useState('')
+    useEffect(() => {
+        setSearchText(location.state.searchText)
+    }, [location])
+    //console.log(searchText)
     return (
         <Layout title="Archives" description="Archives Page of this Blog">
             <Navbar />
@@ -17,9 +21,9 @@ const ArchivesPage = ({ data: { posts } }) => {
                             <input
                                 className='input is-large'
                                 type='text'
-                                value={searchTag}
+                                value={searchText}
                                 onChange={e =>
-                                    setSearchTag(e.currentTarget.value)
+                                    setSearchText(e.currentTarget.value)
                                 }
                                 placeholder="#SearchTag"
                             />
@@ -27,7 +31,7 @@ const ArchivesPage = ({ data: { posts } }) => {
                     </div>
                 </div>
             </section>
-            <PostList searchTag={searchTag} posts={posts} />
+            <PostList searchText={searchText} posts={posts} />
         </Layout>
     )
 }

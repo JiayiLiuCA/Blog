@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-const UtterRances = React.memo(({ slug }) => {
+const Utterances = React.memo(({ slug }) => {
     const [loaded, setLoaded] = useState(false);
     const utterancesRef = useRef() //ref
     useEffect(() => {
@@ -36,4 +36,4 @@ const UtterRances = React.memo(({ slug }) => {
     )
 })
 
-export default UtterRances
+export default Utterances

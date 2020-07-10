@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const PostItem = React.memo(({ post }) => {
+    console.log(post.frontmatter.description)
     return (
 
         <div className='box content'>
@@ -21,6 +22,7 @@ const PostItem = React.memo(({ post }) => {
                         key={tag}
                         className='tag is-info is-rounded'
                         to={`/archives`}
+                        state={{ searchText: `#${tag}` }}
                     >
                         #{tag}
                     </Link>
