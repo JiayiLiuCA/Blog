@@ -7,8 +7,8 @@ description: Gatsby is a free and open source framework based on React that
   of the basics to start a Gatsby project. Learning the basics of React is
   recommended before reading.
 tags:
-  - gatsby
-  - blog
+  - Gatsby
+  - Blog
 ---
 ## Why Gatsby?
 
