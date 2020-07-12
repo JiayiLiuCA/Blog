@@ -12,12 +12,22 @@ const PostList = React.memo(({ searchText, posts }) => {
                             let frontmatter = edge.node.frontmatter
                             let lowerCaseSearchText = searchText.toLowerCase()
                             if (lowerCaseSearchText[0] === '#') {
+                                //empty tag
+                                if (lowerCaseSearchText === '#') {
+                                    return true;
+                                }
                                 //tag search
                                 let lowerCaseSearchTag = lowerCaseSearchText.slice(1)
                                 let lowerCasePostTags = frontmatter.tags.map(tag =>
                                     tag.toLowerCase()
                                 )
-                                return (lowerCasePostTags.includes(lowerCaseSearchTag))
+                                for(const tag of lowerCasePostTags) {
+                                    if (tag.includes(lowerCaseSearchTag)) {
+                                        return true;
+                                    }
+                                }
+                                return false;
+                                //return (lowerCasePostTags.includes(lowerCaseSearchTag))
                             }
                             else {
                                 //title and description search

@@ -26,7 +26,7 @@ const ArchivesPage = ({ data: { posts }, location }) => {
                                 onChange={e =>
                                     setSearchText(e.currentTarget.value)
                                 }
-                                placeholder="#SearchTag"
+                                placeholder="Prefix '#' to search in tags"
                             />
                         </div>
                     </div>
