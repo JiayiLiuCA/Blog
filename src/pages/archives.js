@@ -5,13 +5,22 @@ import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
 
 const ArchivesPage = ({ data: { posts }, location }) => {
-    const [searchText, setSearchText] = useState('')
+    //console.log(`render, location is ${location.state.searchText}`)
+    const [searchText, setSearchText] = useState(location.state.searchText || '')
+    //console.log(`searchText is ${searchText}`)
+
     //useEffect will check if location prop is changed, therefore no infinite loop
-    useEffect(() => {
-        if (location.state) {
-            setSearchText(location.state.searchText)
+    //searchText will always be updated to location state when location changes
+    //Changing searchText will not affect location state therefore useEffect() won't be called
+
+    useEffect(() => { //location changes
+        //console.log("effect ")
+        if (location.state.searchText !== searchText) {
+            //console.log(location.state.searchText)
+            setSearchText(location.state.searchText || '')
         }
     }, [location])
+    
     return (
         <Layout title="Archives" description="Archives Page of this Blog">
             <Navbar />
@@ -22,7 +31,7 @@ const ArchivesPage = ({ data: { posts }, location }) => {
                             <input
                                 className='input is-large'
                                 type='text'
-                                value={searchText}
+                                value={searchText || ''}
                                 onChange={e =>
                                     setSearchText(e.currentTarget.value)
                                 }
