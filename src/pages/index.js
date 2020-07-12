@@ -56,19 +56,16 @@ export default function IndexPage({ data }) {
             <PostList posts={data.latestPosts} />
             <section className="section">
                 <div className="container has-text-centered">
-                    <div className="button is-medium is-light is-fullwidth is-semi-transparent">
+                    <div>
                         <Link
-                            className="is-link-reverse"
+                            className="button is-medium is-light is-fullwidth is-semi-transparent"
                             to="/archives"
                         >
                             Blog Archives
                         </Link>
                     </div>
-
                 </div>
             </section>
-
-
         </Layout>
     )
 }
