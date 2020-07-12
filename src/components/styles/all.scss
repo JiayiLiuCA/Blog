@@ -216,6 +216,17 @@ $postify-color-link: $link;
   background-color: rgba(255,255,255,0.8);
 }
 
+//Index page Blog Archives Link
+.button.is-semi-transparent {
+  background-color: rgba(255,255,255,0.5) !important;
+  &:hover{
+    background-color: rgba(255,255,255,0.7) !important;
+    cursor: context-menu !important;
+  }
+}
+
+
+
 .hero.has-trianglify {
   @extend .is-fullheight;
   position: relative;

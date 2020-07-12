@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
 
 const ArchivesPage = ({ data: { posts }, location }) => {
-    console.log(location)
     const [searchText, setSearchText] = useState('')
     //useEffect will check if location prop is changed, therefore no infinite loop
     useEffect(() => {
