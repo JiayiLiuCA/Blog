@@ -5,19 +5,15 @@ import Navbar from '../components/Navbar'
 import PostList from '../components/PostList'
 
 const ArchivesPage = ({ data: { posts }, location }) => {
-    //console.log("location is " + location.state.searchText)
     const [searchText, setSearchText] = useState(location.state ? location.state.searchText : '')
-    //console.log("searchText is " + searchText)
 
     //useEffect will check if location prop is changed, therefore no infinite loop
     //searchText will always be updated to location state when location changes
     //Changing searchText will not affect location state therefore useEffect() won't be called
 
     useEffect(() => { //location changes
-        //console.log("effect : ")
         //location state is undefined in building stage, add condition to avoid error
         if (location.state && location.state.searchText !== searchText) { 
-            //console.log("setSearchState to " + location.state.searchText)
             setSearchText(location.state.searchText || '')
         }
     }, [location])
