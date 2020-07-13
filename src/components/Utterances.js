@@ -31,7 +31,9 @@ const Utterances = React.memo(({ slug }) => {
     }, [slug])
 
     return (
-        <div  ref={utterancesRef}></div>
+        <section key={slug} className='section' ref={utterancesRef}>
+            {loaded && <div  ref={utterancesRef}></div>}
+        </section>
 
     )
 })
