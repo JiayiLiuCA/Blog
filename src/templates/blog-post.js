@@ -56,12 +56,8 @@ export const BlogPostTemplate = ({
 
 
 const BlogPost = ({ data, pageContext }) => {
-  console.log(data);
-
   const { markdownRemark: post } = data
   const { next, previous } = pageContext
-  console.log(next);
-  console.log(previous);
   return (
     <Layout
       title={post.frontmatter.title}
