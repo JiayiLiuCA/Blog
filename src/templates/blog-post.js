@@ -55,9 +55,13 @@ export const BlogPostTemplate = ({
 }
 
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const BlogPost = ({ data, pageContext }) => {
+  console.log(data);
 
+  const { markdownRemark: post } = data
+  const { next, previous } = pageContext
+  console.log(next);
+  console.log(previous);
   return (
     <Layout
       title={post.frontmatter.title}
@@ -92,8 +96,51 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
       />
+      <div className='section'>
+        <div className='columns'>
+          <div className='column'>
+            {previous && (previous.frontmatter.templateKey === "blog-post") && (
+              <Link
+                className='is-block is-link-reverse has-text-weight-medium has-text-right has-text-centered-mobile'
+                to={`/${previous.fields.slug}`}
+              >
+                <strong className='has-text-grey'>
+                  Previous Blog
+                  </strong>
+                <p>{previous.frontmatter.title}</p>
+              </Link>
+            )}
+          </div>
+
+          <div
+            className='has-background-grey-lighter is-hidden-mobile'
+            style={{
+              alignSelf: 'center',
+              width: 10,
+              height: 10,
+              margin: '0 2em',
+            }}
+          />
+
+          <div className='column'>
+            {next && (next.frontmatter.templateKey === "blog-post") && (
+              <Link
+                className='is-block is-link-reverse has-text-weight-medium has-text-left has-text-centered-mobile'
+                to={`/${next.fields.slug}`}
+              >
+                <strong className='has-text-grey'>
+                  Next Blog
+                </strong>
+
+                <p>{next.frontmatter.title}</p>
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+
       <Utterances slug={post.fields.slug} />
-    </Layout>
+    </Layout >
   )
 }
 

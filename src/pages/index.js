@@ -28,7 +28,7 @@ export default function IndexPage({ data }) {
                             alt="logo"
                         />
                         {tempoMarkings.map(tempoMarking => (
-                            <div className="hidden-text" id={tempoMarking} style={{ color: "#000000" }}>
+                            <div className="hidden-text" key={tempoMarking} style={{ color: "#000000" }}>
                                 {tempoMarking}
                             </div>
                         ))}

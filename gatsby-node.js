@@ -8,7 +8,10 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        sort: { fields: [frontmatter___date], order: DESC }
+        ) {
         edges {
           node {
             id
@@ -20,6 +23,24 @@ exports.createPages = ({ actions, graphql }) => {
               path
               title
               templateKey
+            }
+          }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              templateKey
+              title
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              templateKey
+              title
             }
           }
         }
@@ -35,6 +56,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge) => {
       const id = edge.node.id
+      const previous = edge.previous
+      const next = edge.next
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -44,6 +67,8 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          previous,
+          next,
         },
       })
     })
@@ -60,7 +85,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value : filePath.replace(
-        /^(\/blog\/)/,
+        /^(\/blog\/)/, //remove /blog/ in url
         ""
       )
     })
