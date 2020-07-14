@@ -15,7 +15,7 @@ export default function IndexPage({ data }) {
         'Allegro', 'Vivace', 'Vivacissimo', 'Allegrissimo', 'Presto', 'Prestissimo'
     ]
     return (
-        <Layout title="Jiayi Liu Blog" description="Jiayi Liu Blog">
+        <Layout title="J's Blog" description="J's Blog">
             <section className="hero has-gatsby-img">
                 <Img fluid={data.file.childImageSharp.fluid} />
                 <Navbar />

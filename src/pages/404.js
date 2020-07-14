@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
   <Layout
-      title="404"
+      title="404 | J's Blog"
       description="404 Page not Found"
     >
     <div>

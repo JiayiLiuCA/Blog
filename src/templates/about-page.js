@@ -35,7 +35,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout
-      title="About"
+      title="About | J's Blog"
       description="About this blog"
     >
       <Navbar />

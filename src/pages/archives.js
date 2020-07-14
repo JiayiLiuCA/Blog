@@ -19,7 +19,7 @@ const ArchivesPage = ({ data: { posts }, location }) => {
     }, [location])
     
     return (
-        <Layout title="Archives" description="Archives Page of this Blog">
+        <Layout title="Archives | J's Blog" description="Archives Page of this Blog">
             <Navbar />
             <section className='section'>
                 <div className='container'>
