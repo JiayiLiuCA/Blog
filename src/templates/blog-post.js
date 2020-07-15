@@ -92,6 +92,7 @@ const BlogPost = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         tags={post.frontmatter.tags}
       />
+      {/* Next and Previous Blog */}
       <div className='section'>
         <div className='columns'>
           <div className='column'>

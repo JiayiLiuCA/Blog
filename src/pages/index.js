@@ -46,10 +46,17 @@ export default function IndexPage({ data }) {
             </section>
             <section className="section">
                 <div className="container has-text-centered">
-                    <div className="content is-size-4">
-                        <p>
-                            Welcome to my blog!
-                        </p>
+                    <div className="content">
+                        <div className="is-size-3 has-text-weight-semibold">
+                            <p>
+                                Welcome to my Blog!
+                            </p>
+                        </div>
+                        <div className="is-size-5">
+                            <p>Here I keep a record of what I like and enjoy.</p>
+                            <br />
+                            <p>Lastest Blogs:</p>
+                        </div>
                     </div>
                 </div>
             </section>

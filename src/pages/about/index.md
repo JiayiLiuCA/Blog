@@ -12,7 +12,7 @@ The project is using [Netlify CMS](https://www.netlifycms.org/) for content mana
 
 # About Me
 
-I am front-end developer located in Toronto, Canada. I love to design and build applications with great UI/UX.
+I am front-end developer located in Toronto, Canada. I love designing and building applications with great UI/UX.
 
 Classical music is another of my passions. My most beloved composer is Johann Sebastian Bach.
 
