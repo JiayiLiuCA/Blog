@@ -8,30 +8,17 @@ import logo from '../img/logo.png'
 
 
 export default function IndexPage({ data }) {
-    const tempoMarkings = [
-        'Larghissimo', 'Adagissimo', 'Grave', 'Largo', 'Lento',
-        'Larghetto', 'Adagio', 'Adagietto', 'Andante', 'Andantino',
-        'Marcia moderato', 'Andante moderato', 'Moderato', 'Allegretto', 'Allegro moderato',
-        'Allegro', 'Vivace', 'Vivacissimo', 'Allegrissimo', 'Presto', 'Prestissimo'
-    ]
     return (
         <Layout title="J's Blog" description="J's Blog">
             <section className="hero has-gatsby-img">
+                {/*Background img, queried from graphQL*/}
                 <Img fluid={data.file.childImageSharp.fluid} />
+
                 <Navbar />
+
                 <div className="hero-body has-text-centered">
-                    <div className="container is-size-5">
-                        <img
-                            className="index-logo"
-                            style={{ width: '350px', height: '350px' }}
-                            src={logo}
-                            alt="logo"
-                        />
-                        {tempoMarkings.map(tempoMarking => (
-                            <div className="hidden-text" key={tempoMarking} style={{ color: "#000000" }}>
-                                {tempoMarking}
-                            </div>
-                        ))}
+                    <div className="container is-size-1">
+                        <strong>J's Blog</strong>
                     </div>
                 </div>
                 <div className="hero-foot has-text-centered">
