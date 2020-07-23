@@ -17,8 +17,13 @@ export default function IndexPage({ data }) {
                 <Navbar />
 
                 <div className="hero-body has-text-centered">
-                    <div className="container is-size-1">
-                        <strong>J's Blog</strong>
+                    <div className="container">
+                        <img
+                            className="index-logo"
+                            style={{ width: '40vmin', height: '40vmin' }}
+                            src={logo}
+                            alt="JL logo"
+                        />
                     </div>
                 </div>
                 <div className="hero-foot has-text-centered">
