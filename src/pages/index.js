@@ -7,24 +7,30 @@ import PostList from '../components/PostList'
 import logo from '../img/logo.png'
 
 
+
+
 export default function IndexPage({ data }) {
     return (
         <Layout title="J's Blog" description="J's Blog">
             <section className="hero has-gatsby-img">
                 {/*Background img, queried from graphQL*/}
                 <Img fluid={data.file.childImageSharp.fluid} />
-
-                <Navbar />
+                <div className="hero-head">
+                    <Navbar />
+                </div>
 
                 <div className="hero-body has-text-centered">
-                    <div className="container">
+                    <div className="container index-logo">
                         <img
-                            className="index-logo"
-                            style={{ width: '40vmin', height: '40vmin' }}
+                            style={{ width: '35vmin', height: '35vmin' }}
                             src={logo}
                             alt="JL logo"
                         />
+                        <div className="title is-size-2 has-text-weight-bold">
+                            <p>J's Blog</p>
+                        </div>
                     </div>
+
                 </div>
                 <div className="hero-foot has-text-centered">
                     <svg viewBox="0 0 32 32" width="32" height="32">
@@ -41,7 +47,7 @@ export default function IndexPage({ data }) {
                     <div className="content">
                         <div className="is-size-3 has-text-weight-semibold">
                             <p>
-                                Welcome to my Blog!
+                                Welcome!
                             </p>
                         </div>
                         <div className="is-size-5">

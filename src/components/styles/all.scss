@@ -139,23 +139,16 @@ $postify-color-link: $link;
 // with gatsby image as background
 .hero.has-gatsby-img {
   @extend .is-fullheight;
-  //@extend .is-dark;
   position: relative;
   color: #fff;
   
+
   .navbar-item {
     @media screen and (max-width: $mobile) {
       color: $grey-dark !important;
     }
   }
-  
-  .navbar-item:hover {
-    background-color: rgba($black, 0.3) !important;
-  }
     
-  .navbar-menu.is-active {
-    background-color: rgba($white, 0.95) !important;
-  }
   
   .hero-body {
     padding-top: 0;
@@ -178,31 +171,17 @@ $postify-color-link: $link;
     width: 100%;
     height: 100%;
     user-select: none;
-    z-index: -1;
+    z-index: -100;
   }
 }
 
-@media screen and (max-width: $mobile) {
-  .hidden-text {
-    display: none;
-  }
-}
-
-.hidden-text {
-  font-style: italic;;
-  user-select: none;
-  opacity: 0;
-  transition: 2s linear;
-  
-}
-.hidden-text:hover {
-  opacity: 1;
-  transition: 0.1s linear;
-  //animation: 1s, fade-in-out, ease-in-out; 
-}
 
 .index-logo {
-  animation: 2s fade-in;
+  padding-top: 6vh;
+  animation: 2.5s fade-in;
+  &:hover {
+    cursor: context-menu;
+  }
 }
 
 @keyframes fade-in {
@@ -231,17 +210,11 @@ $postify-color-link: $link;
   @extend .is-fullheight;
   position: relative;
   
-  .navbar-item:hover {
-    background-color: rgba($white, 0.3) !important;
-  }
 
   .navbar-burger {
     color: $white;
   }
   
-  .navbar-menu.is-active {
-    background-color: rgba($white, 0.7) !important;
-  }
   
   .hero-foot {
     position: relative;
