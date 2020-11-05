@@ -41,6 +41,7 @@ export const BlogPostTemplate = ({
                     key={tag}
                     className='tag is-info is-rounded'
                     to={`/archives`}
+                    state={{ searchText: `#${tag}` }}
                   >
                     #{tag}
                   </Link>
