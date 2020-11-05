@@ -26,12 +26,12 @@ I used [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-
 
 Here I will introduce some basic structure/files in Gatsby to build a blog website. Full Gatsby Documentation is available [here](https://www.gatsbyjs.org/docs/).
 
-- `/src/pages` folder contains pages that will be rendered into individual web pages. Each `.js` file (`404.js`, `index.js`) will be directly rendered into individual web page, while other files like Markdown will be queried using GraphQL, and rendered into pages through templates.
-- `src/templates` stores the template files mentioned before.
-- `src/components` is where the react components and 'css' files are.
+* `/src/pages` folder contains pages that will be rendered into individual web pages. Each `.js` file (`404.js`, `index.js`) will be directly rendered into individual web page, while other files like Markdown will be queried using GraphQL, and rendered into pages through templates.
+* `src/templates` stores the template files mentioned before.
+* `src/components` is where the react components and 'css' files are.
+* `/gatsby-config.js` is the configuration file for the project. Most times we modify this file is for plugins
+* `/gatsby-node.js` is where we can use [Gatsby node APIs](https://www.gatsbyjs.org/docs/node-apis/) to create pages for Markdown files, or customize path for posts.
 
-- `/gatsby-config.js` is the configuration file for the project. Most times we modify this file is for plugins
-- `/gatsby-node.js` is where we can use [Gatsby node APIs](https://www.gatsbyjs.org/docs/node-apis/) to create pages for Markdown files, or customize path for posts.
+## Summary
 
-## 
-
+These pretty much summarized the beginner knowledge of Gatsby. Hope you can have a good start.
